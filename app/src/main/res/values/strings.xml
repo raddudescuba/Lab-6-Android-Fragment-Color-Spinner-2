@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ColorSpinner</string>
+    <string-array name="Colors">
+        <item>Choose a Color</item>
+        <item>Red</item>
+        <item>Blue</item>
+        <item>Green</item>
+        <item>Black</item>
+        <item>Gray</item>
+    </string-array>
+</resources>
