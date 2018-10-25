@@ -17,10 +17,11 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-public class PaletteActivity extends AppCompatActivity implements SpinnerFragment.GetColorInterface{
+public class PaletteActivity extends AppCompatActivity implements GetColor{
     boolean portraitMode;
     FragmentManager fragmentManager;
     CanvasFragment canvasFragment;
+    SpinnerFragment spinnerFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,11 +33,12 @@ public class PaletteActivity extends AppCompatActivity implements SpinnerFragmen
 
         portraitMode=findViewById(R.id.fragmentLayout2)==null;
         canvasFragment=new CanvasFragment();
+        spinnerFragment=new SpinnerFragment();
 
         fragmentManager=getSupportFragmentManager();
 
         fragmentManager.beginTransaction()
-                .replace(R.id.fragmentLayout,new SpinnerFragment())
+                .replace(R.id.fragmentLayout,spinnerFragment)
                 .commit();
 
         if(!portraitMode){
